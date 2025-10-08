@@ -139,7 +139,7 @@ jobs:
           scan-type: image
           image-ref: rahat6/backend:${{ env.IMAGE_TAG }}
           format: table
-          exit-code: '0'                 # set to '1' to fail on vulns
+          exit-code: '1'                 # set to '1' to fail on vulns
           ignore-unfixed: true
           vuln-type: os,library
           severity: CRITICAL,HIGH
@@ -150,7 +150,7 @@ jobs:
           scan-type: image
           image-ref: rahat6/frontend:${{ env.IMAGE_TAG }}
           format: table
-          exit-code: '0'
+          exit-code: '1'
           ignore-unfixed: true
           vuln-type: os,library
           severity: CRITICAL,HIGH
